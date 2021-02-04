@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://kit.fontawesome.com/c309d4cb8e.js" crossorigin="anonymous"></script>
+    <title>Shopping List</title>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Shopping List</h1>
+        <div class="shopping-list-container">
+            <div class = "list-input">
+                <form action="/" method="POST" class="actual-input">
+                    <input type="text" name='item' id='item' placeholder="New Item">
+                </form>
+            </div>
+            <div class="list">
+                {% for item in items %}
+                    <div class="single-item">
+                        <div class="item-css">{{item.item}}</div>
+                        <div class="delete-button">
+                            <form action="/delete-item/{{item.id}}" method="POST">
+                                <button  type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- <a href="/delete-item"><i class="fas fa-trash"></i></a> -->
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

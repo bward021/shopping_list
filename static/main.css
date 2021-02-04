@@ -1,0 +1,61 @@
+body {
+    background-color: #d8dad0;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.list-input > .actual-input input{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.list-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin: 30px 30px;
+    padding: 20px;
+    background-color: snow;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25)  ;
+}
+
+.list > .single-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 10px 10px;
+    padding: 5px;
+}
+
+.list > .single-item:hover {
+    background-color: #D8DAD3;
+    transition: 0.5s;
+}
+
+.list > .single-item > .item-css{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5px;
+}
+
+.list > .single-item > .delete-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
